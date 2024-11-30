@@ -32,18 +32,18 @@ class DateTime:
         }
         print(json.dumps(output, indent=4))
 
-    if __name__ == "__main__":
-        print("=====================================================================================")
-        print("Available Input formats: \n"
-              "1. Enter now for the current time\n"
-              "2. Enter the input time in any format\n"
-              "3. Enter add X mins/hours/days/weeks/yrs to add X to the current time\n"
-              "4. Enter subtract/sub X mins/hours/days/weeks/yrs to subtract X from the current time\n")
+if __name__ == "__main__":
+    print("=" * 100)
+    print("Available Input formats: \n"
+          "1. Enter now for the current time\n"
+          "2. Enter the input time in any format\n"
+          "3. Enter add X mins/hours/days/weeks/yrs to add X to the current time\n"
+          "4. Enter subtract/sub X mins/hours/days/weeks/yrs to subtract X from the current time\n")
 
-        input_time = input("Enter the input time in one of the above format: ")
+    input_time = input("Enter the input time in one of the above format: ")
 
-        time = DateTimeParser.parse_input(input_time)
+    time = DateTimeParser.parse_input(input_time)
 
-        printAllTime(DateTimeUtil(time))
+    DateTime().printAllTime(DateTimeUtil(time))
 
-        print("=====================================================================================")
+    print("=" * 100)
